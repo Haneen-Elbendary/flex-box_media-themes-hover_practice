@@ -1,0 +1,144 @@
+/* Start Global rules */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* End Global rules */
+
+/* Start main-components */
+:root {
+  --color-1-: #7143ce;
+  --color-2-: #485a6f;
+  --color-3-: #18212a;
+  --bck-color--: #f3f8ff;
+  --text-color--: #84848d;
+  --q-color--: #ac76fa;
+  --large-text-size--: 1.2rem;
+  --small-text-size--: 1rem;
+  --white-color--: white;
+  --black-color--: black;
+}
+.container {
+  margin: 0 auto;
+}
+img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*End main-components */
+
+/* Start testimonials */
+.testimonials {
+  background-color: var(--bck-color--);
+  padding: 20px 0;
+  min-height: 100vh;
+}
+.testimonials .container {
+  padding: 0 10px;
+}
+/* all divs */
+.left > div,
+.right > div {
+  padding: 20px 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+/* first-div */
+.left > div:first-child {
+  background-color: var(--color-1-);
+  position: relative;
+}
+.left > div:first-child::after {
+  position: absolute;
+  font-family: "Font Awesome 6 Free";
+  font-size: 170px;
+  font-weight: 600;
+  content: "\f10d";
+  top: -20px;
+  right: 80px;
+  color: var(--q-color--);
+}
+.left > div:first-child .text p:first-child {
+  z-index: 2;
+  position: relative;
+}
+
+.head-info {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+  z-index: 2;
+  position: relative;
+}
+.head-info p:first-of-type {
+  color: var(--white-color--);
+  font-weight: bold;
+  font-size: var(--large-text-size--);
+}
+.head-info p:last-child {
+  font-size: var(--small-text-size--);
+  color: var(--text-color--);
+}
+
+.text p:first-child {
+  color: var(--white-color--);
+  font-size: var(--large-text-size--);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.text p:nth-child(2) {
+  color: var(--text-color--);
+}
+/* second-div */
+.left > div:nth-child(2) {
+  background-color: var(--color-2-);
+}
+/* right-div */
+.right > div {
+  background-color: var(--white-color--);
+}
+.right > div p:first-of-type,
+.left > div:nth-child(3) .head-info p:first-of-type,
+.left > div:nth-child(4) .text p:first-child,
+.left > div:nth-child(3) .text p:first-child,
+.right div .text p:first-child {
+  color: var(--black-color--);
+}
+
+/* 3-div */
+.left > div:nth-child(3) {
+  background-color: white;
+}
+.left > div:nth-child(3) {
+  background-color: var(--white-color--);
+}
+/* 4-div */
+.left > div:nth-child(4) {
+  background-color: var(--color-3-);
+}
+.left > div:nth-child(4) .text p:first-child {
+  color: var(--white-color--);
+}
+
+/* shadow */
+.left > div,
+.right > div {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* hover */
+.left > div:hover,
+.right > div:hover {
+  filter: brightness(120%);
+}
+/* End testimonials */

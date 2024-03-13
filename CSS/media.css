@@ -1,0 +1,73 @@
+/* Mobile First . */
+
+/* All screens */
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}
+@media (min-width: 1028px) {
+  .testimonials .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .left {
+    flex: 1;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 80%;
+  }
+  .right {
+    width: 25%;
+  }
+  .left > div {
+    height: 302.1px;
+  }
+  .left > div:first-child,
+  .left > div:last-child {
+    width: 65%;
+  }
+  .left > div:nth-child(2),
+  .left > div:nth-child(3) {
+    width: 33%;
+  }
+  .right > div {
+    width: 100%;
+    height: calc(302.1px * 2 + 18px);
+  }
+}
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-1-: #8bc231;
+    --color-2-: #b3a990;
+    --color-3-: #e7ded5;
+    --bck-color--: #222220;
+    --text-color--: #84848d;
+    --q-color--: #568804;
+    --white-color--: black;
+    --black-color--: white;
+  }
+}
+/* control ::after */
+@media (max-width: 321px) {
+  .left > div:first-child::after {
+    right: 5px;
+  }
+}
+@media (max-width: 426px) {
+  .left > div:first-child::after {
+    right: 15px;
+  }
+  /* shadow */
+  .left > div,
+  .right > div {
+    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
+      /* shadow ring  */ 0 0 0 1px hsla(0, 0%, 0%, 0.05),
+      /* multiple soft shadows  */ 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+      0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+  }
+}
